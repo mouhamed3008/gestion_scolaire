@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %} {% block body %}
+<div class="main-panel">
+    <!-- BEGIN : Main Content-->
+    <div class="main-content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            {#
+            <div class="row">
+
+                <div class="card-header col-12 mt-4">
+                    <div class="card-title text-center font-weight-bold">{{ title }}</div>
+
+                </div>
+            </div> #}
+            <div class="content-header">Informations Personnels</div>
+            <div class="card card-outline-danger">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            Nom Complet: <span class="font-weight-bold ml-1"> {{ professeur.nomComplet | capitalize}}</span>
+                        </li>
+
+                        <li>
+                            Grade: <span class="font-weight-bold ml-5"> {{ professeur.grade | capitalize}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="content-header">Modules</div>
+            <div class="card card-outline-primary">
+                <div class="card-body">
+
+                    <li>{{ professeur.module.libelle }}</li>
+
+                </div>
+            </div>
+
+
+            <div class="content-header">Classes</div>
+            <div class="card card-outline-info">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            Nom Complet: <span class="font-weight-bold ml-1"> {{ professeur.nomComplet | capitalize}}</span>
+                        </li>
+
+                        <li>
+                            Grade: <span class="font-weight-bold ml-5"> {{ professeur.grade | capitalize}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+
+</div>
+</div>
+
+
+{% endblock %}

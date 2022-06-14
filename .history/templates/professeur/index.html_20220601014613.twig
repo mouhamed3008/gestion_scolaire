@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <table class="table table-striped table-bordered">
+    <tr>
+      <td>
+        Nom Complet
+      </td>
+      <td>
+        Grade
+      </td>
+    </tr>
+
+    {% for professeurs in prof %}
+      <tr>
+        <td>
+            {{ prof.nomComplet }}
+        </td>
+        <td>
+          Grade
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

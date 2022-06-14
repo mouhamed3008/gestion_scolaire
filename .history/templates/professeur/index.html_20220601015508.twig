@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+   <div class="card-header bg-primary">
+    <div class="card-title text-center text-white fw-bold">
+        Liste des Personnes
+    </div>
+    </div>
+  <div class="container mt-5">
+ 
+    <table class="table  table-bordeless">
+      <tr>
+        <th>
+          Nom Complet
+        </th>
+        <th>
+          Grade
+        </th>
+        <th>
+          Actions
+        </th>
+      </tr>
+
+      {% for prof in professeurs %}
+        <tr>
+          <td>
+            {{ prof.nomComplet }}
+          </td>
+          <td>
+            {{ prof.grade }}
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endblock %}

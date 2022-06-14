@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %} {% block body %}
+<div class="main-panel">
+    <!-- BEGIN : Main Content-->
+    <div class="main-content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <section class="users-view">
+                <!-- Media object starts -->
+                <div class="row">
+                    <div class="col-12 col-sm-7">
+                        <div class="media d-flex align-items-center">
+                            <a href="javascript:;">
+                                <img src={{ asset( 'images/school.jpg')}} alt="user view avatar" class="users-avatar-shadow rounded" height="64" width="64">
+                            </a>
+                            <div class="media-body ml-3">
+                                <h4>
+                                    <span class="users-view-name">{{professeur.nomComplet| upper }}</span>
+
+                                </h4>
+                                <span>{{professeur.grade| upper }}</span>
+                                <span class="users-view-id">305</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-5 d-flex justify-content-end align-items-center">
+                        <a href="javaScript:void(0);" class="btn btn-sm bg-light-secondary mr-2 px-3 py-1"><i class="ft-mail"></i></a>
+                        <a href="javaScript:void(0);" class="btn btn-sm bg-light-secondary mr-2 px-3 py-1">Profile</a>
+                        <a href="page-users-edit.html" class="btn btn-sm btn-primary px-3 py-1">Edit</a>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Card data starts -->
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <table class="table table-borderless">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Registered:</td>
+                                                        <td>2019/01/01</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Latest Activity:</td>
+                                                        <td class="users-view-latest-activity">2019/04/30</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Verified:</td>
+                                                        <td class="users-view-verified">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Role:</td>
+                                                        <td class="users-view-role">Staff</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Status:</td>
+                                                        <td><span class="badge bg-light-success users-view-status">Active</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card data ends -->
+                    </div>
+
+
+                </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+</div>
+
+
+{% endblock %}

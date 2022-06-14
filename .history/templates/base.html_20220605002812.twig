@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      {% block title %}
+        Welcome!
+      {% endblock %}
+    </title>
+      <link rel="stylesheet" href={{ asset('css/bootstrap.css') }}>
+      <link rel="stylesheet" href={{ asset('css/bootstrap-extended.css') }}>
+      <link rel="stylesheet" href={{ asset('css/colors.css') }}>
+      <link rel="stylesheet" href={{ asset('css/components.css') }}>
+    <link rel="stylesheet" href={{ asset('css/themes/layout-dark.css') }}>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet" />
+    {% block stylesheets %}
+  
+    {% endblock %}
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"
+      defer></script>
+
+    {% block javascripts %}
+
+    {% endblock %}
+  </head>
+  {% include '_partials/_nav.html.twig' %}
+  <body>
+    {% block body %}
+
+    {% endblock %}
+  </body>
+</html>

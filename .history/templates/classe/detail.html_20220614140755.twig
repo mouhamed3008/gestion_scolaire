@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %} {% block body %}
+<div class="main-panel">
+    <!-- BEGIN : Main Content-->
+    <div class="main-content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <section class="users-view">
+                <!-- Media object starts -->
+                <div class="row">
+                    <div class="col-12 col-sm-7">
+                        <div class="media d-flex align-items-center">
+                            <a href="javascript:;">
+                                <img src={{ asset( 'images/school.jpg')}} alt="user view avatar" class="users-avatar-shadow rounded" height="64" width="64">
+                            </a>
+                            <div class="media-body ml-3">
+                                <h4>
+                                    <span class="users-view-name">{{classe.libelle| upper }}</span>
+                                </h4>
+                                <span>{{classe.filiere| upper }}</span>
+                                <span>{{ classe.niveau | upper }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-5 d-flex justify-content-end align-items-center">
+                        <a href="javaScript:void(0);" class="btn btn-sm bg-danger mr-2 px-3 py-1 text-white">Supprimer</a>
+                        <a href={{ path( 'edit_prof', {id:classe.id} ) }} class="btn btn-sm btn-primary px-3 py-1">Edit</a>
+                    </div>
+                </div>
+
+
+
+
+
+        </div>
+    </div>
+
+
+    {% endblock %}

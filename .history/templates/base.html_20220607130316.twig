@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        {% block title %} Welcome! {% endblock %}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="description" content="Apex admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Apex admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900%7CMontserrat:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href={{ asset( 'css/fonts/feather/style.min.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/fonts/simple-line-icons/style.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/fonts/font-awesome/css/font-awesome.min.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/vendors/css/perfect-scrollbar.min.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/vendors/css/prism.min.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/vendors/css/switchery.min.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/vendors/css/fullcalendar.min.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/vendors/css/daygrid.min.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/vendors/css/timegrid.min.css') }}>
+
+
+    <link rel="stylesheet" href={{ asset( 'css/bootstrap.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/bootstrap-extended.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/colors.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/components.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/themes/layout-dark.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/plugins/switchery.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/pages/app-calendar.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/vendors/css/datatables/dataTables.bootstrap4.min.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/core/menu/horizontal-menu.css') }}>
+    <link rel="stylesheet" href={{ asset( 'css/style.css') }}> {% block stylesheets %} {% endblock %} {% block javascripts %} {% endblock %}
+</head>
+{% if is_granted("IS_AUTHENTICATED_FULLY") %} {% include '_partials/_nav.html.twig' %} {% endif %}
+
+<body class="vertical-layout vertical-menu 2-columns  navbar-static layout-dark" data-menu="vertical-menu" data-col="2-columns">
+    {% block body %} {% endblock %}
+
+
+</body>
+
+
+<script src={{ asset( 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')}}></script>
+{#
+<script src={{ asset( 'css/vendors/js/jquery-ui.min.js')}}></script> #}
+<script src={{ asset( 'css/vendors/js/vendors.min.js')}}></script>
+<script src={{ asset( 'css/vendors/js/switchery.min.js')}}></script>
+<!-- BEGIN VENDOR JS-->
+<!-- BEGIN PAGE VENDOR JS-->
+<script src={{ asset( 'css/vendors/js/moment.min.js')}}></script>
+<script src={{ asset( 'css/vendors/js/fullcalendar.min.js')}}></script>
+<script src={{ asset( 'css/vendors/js/daygrid.min.js')}}></script>
+<script src={{ asset( 'css/vendors/js/timegrid.min.js')}}></script>
+<script src={{ asset( 'css/vendors/js/interactions.min.js')}}></script>
+<!-- END PAGE VENDOR JS-->
+<!-- BEGIN APEX JS-->
+<script src={{ asset( 'js/core/app-menu.js')}}></script>
+<script src={{ asset( 'js/core/app.js')}}></script>
+<script src={{ asset( 'js/notification-sidebar.js')}}></script>
+<script src={{ asset( 'js/customizer.js')}}></script>
+<script src={{ asset( 'js/scroll-top.js')}}></script>
+
+<script src={{ asset( 'css/vendors/js/datatable/dataTables.bootstrap4.min.js')}}></script>
+<script src={{ asset( 'css/vendors/js/datatable/jquery.dataTables.min.js')}}></script>
+
+<script src={{ asset( 'js/data-tables/dt-basic-initialization.js')}}></script>
+<script src={{ asset( 'js/data-tables/dt-advanced-initialization.js')}}></script>
+
+<!-- END APEX JS-->
+<!-- BEGIN PAGE LEVEL JS-->
+<script src={{ asset( 'js/components-modal.min.js')}}></script>
+<script src={{ asset( 'js/app-calendar.js')}}></script>
+<!-- END PAGE LEVEL JS-->
+<!-- BEGIN: Custom CSS-->
+<script src={{ asset( 'js/scripts.js')}}></script>
+<script type="text/javascript">
+    function disableBackButton() {
+        window.history.forward();
+    }
+    setTimeout("disableBackButton()", 0);
+</script>
+
+</html>
