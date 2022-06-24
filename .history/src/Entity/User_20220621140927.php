@@ -15,7 +15,8 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 #[ORM\InheritanceType("JOINED")]
 #[ORM\DiscriminatorColumn(name:"type", type:"string")]
 #[ORM\DiscriminatorMap(["etudiant"=>"Etudiant", "professeur"=>"Professeur", "rp"=> "Rp", "ac"=>"Ac"])]
-
+#[ORM\Entity]
+#[UniqueEntity('email')]
 class User extends Personne implements UserInterface, PasswordAuthenticatedUserInterface
 {
   

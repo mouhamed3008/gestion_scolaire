@@ -12,6 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: ProfesseurRepository::class)]
 #[ApiResource()]
+
 class Professeur extends Personne
 {
 
